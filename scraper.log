@@ -1,0 +1,413 @@
+DEBUG:root:Scraping URL: http://nytimes.com with keywords: ['Trump', 'Inflation']
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): nytimes.com:80
+DEBUG:urllib3.connectionpool:http://nytimes.com:80 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 233586
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: U.S. Politics
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Recommendations
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Columns
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Topics
+DEBUG:root:Checking headline: Columnists
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Audio
+DEBUG:root:Checking headline: Listen
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Games
+DEBUG:root:Checking headline: Play
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Community
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Cooking
+DEBUG:root:Checking headline: Recipes
+DEBUG:root:Checking headline: Editors' Picks
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Wirecutter
+DEBUG:root:Checking headline: Reviews
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: The Best...
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: The Athletic
+DEBUG:root:Checking headline: Leagues
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: U.S. Politics
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Recommendations
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Columns
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Topics
+DEBUG:root:Checking headline: Columnists
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Audio
+DEBUG:root:Checking headline: Listen
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Games
+DEBUG:root:Checking headline: Play
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Community
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Cooking
+DEBUG:root:Checking headline: Recipes
+DEBUG:root:Checking headline: Editors' Picks
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Wirecutter
+DEBUG:root:Checking headline: Reviews
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: The Best...
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: The Athletic
+DEBUG:root:Checking headline: Leagues
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: New York Times - Top Stories
+DEBUG:root:Checking headline: Opinion
+DEBUG:root:Checking headline: What’s in Our Queue? Charlotte Day Wilson and More
+DEBUG:root:Checking headline: In Case You Missed It
+DEBUG:root:Checking headline: More News
+DEBUG:root:Checking headline: Well
+DEBUG:root:Checking headline: Culture and Lifestyle
+DEBUG:root:Checking headline: The AthleticSports coverage
+DEBUG:root:Checking headline: CookingRecipes and guides
+DEBUG:root:Checking headline: WirecutterProduct recommendations
+DEBUG:root:Checking headline: GamesDaily puzzles
+DEBUG:root:Checking headline: Site Index
+DEBUG:root:Checking headline: Site Information Navigation
+DEBUG:root:Found 0 matching links
+DEBUG:root:Scraping URL: http://nytimes.com with keywords: ['Trump', 'Inflation']
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): nytimes.com:80
+DEBUG:urllib3.connectionpool:http://nytimes.com:80 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 234158
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: U.S. Politics
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Recommendations
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Columns
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Topics
+DEBUG:root:Checking headline: Columnists
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Audio
+DEBUG:root:Checking headline: Listen
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Games
+DEBUG:root:Checking headline: Play
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Community
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Cooking
+DEBUG:root:Checking headline: Recipes
+DEBUG:root:Checking headline: Editors' Picks
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Wirecutter
+DEBUG:root:Checking headline: Reviews
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: The Best...
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: The Athletic
+DEBUG:root:Checking headline: Leagues
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: U.S. Politics
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Recommendations
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Columns
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Topics
+DEBUG:root:Checking headline: Columnists
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Audio
+DEBUG:root:Checking headline: Listen
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Games
+DEBUG:root:Checking headline: Play
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Community
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Cooking
+DEBUG:root:Checking headline: Recipes
+DEBUG:root:Checking headline: Editors' Picks
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Wirecutter
+DEBUG:root:Checking headline: Reviews
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: The Best...
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: The Athletic
+DEBUG:root:Checking headline: Leagues
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: New York Times - Top Stories
+DEBUG:root:Checking headline: Opinion
+DEBUG:root:Checking headline: What’s in Our Queue? Charlotte Day Wilson and More
+DEBUG:root:Checking headline: In Case You Missed It
+DEBUG:root:Checking headline: More News
+DEBUG:root:Checking headline: Well
+DEBUG:root:Checking headline: Culture and Lifestyle
+DEBUG:root:Checking headline: The AthleticSports coverage
+DEBUG:root:Checking headline: CookingRecipes and guides
+DEBUG:root:Checking headline: WirecutterProduct recommendations
+DEBUG:root:Checking headline: GamesDaily puzzles
+DEBUG:root:Checking headline: Site Index
+DEBUG:root:Checking headline: Site Information Navigation
+DEBUG:root:Found 0 matching links
+DEBUG:root:Scraping URL: http://nytimes.com with keywords: ['Trump', 'Inflation']
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): nytimes.com:80
+DEBUG:urllib3.connectionpool:http://nytimes.com:80 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): nytimes.com:443
+DEBUG:urllib3.connectionpool:https://nytimes.com:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.nytimes.com:443
+DEBUG:urllib3.connectionpool:https://www.nytimes.com:443 "GET / HTTP/1.1" 200 233701
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: U.S. Politics
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Recommendations
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Columns
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Topics
+DEBUG:root:Checking headline: Columnists
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Audio
+DEBUG:root:Checking headline: Listen
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Games
+DEBUG:root:Checking headline: Play
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Community
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Cooking
+DEBUG:root:Checking headline: Recipes
+DEBUG:root:Checking headline: Editors' Picks
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Wirecutter
+DEBUG:root:Checking headline: Reviews
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: The Best...
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: The Athletic
+DEBUG:root:Checking headline: Leagues
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: U.S. Politics
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Recommendations
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Columns
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Sections
+DEBUG:root:Checking headline: Topics
+DEBUG:root:Checking headline: Columnists
+DEBUG:root:Checking headline: Podcasts
+DEBUG:root:Checking headline: Audio
+DEBUG:root:Checking headline: Listen
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Games
+DEBUG:root:Checking headline: Play
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Community
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Cooking
+DEBUG:root:Checking headline: Recipes
+DEBUG:root:Checking headline: Editors' Picks
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: Wirecutter
+DEBUG:root:Checking headline: Reviews
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: The Best...
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: The Athletic
+DEBUG:root:Checking headline: Leagues
+DEBUG:root:Checking headline: Top Stories
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: 
+DEBUG:root:Checking headline: New York Times - Top Stories
+DEBUG:root:Checking headline: Opinion
+DEBUG:root:Checking headline: What’s in Our Queue? Charlotte Day Wilson and More
+DEBUG:root:Checking headline: In Case You Missed It
+DEBUG:root:Checking headline: More News
+DEBUG:root:Checking headline: Well
+DEBUG:root:Checking headline: Culture and Lifestyle
+DEBUG:root:Checking headline: The AthleticSports coverage
+DEBUG:root:Checking headline: CookingRecipes and guides
+DEBUG:root:Checking headline: WirecutterProduct recommendations
+DEBUG:root:Checking headline: GamesDaily puzzles
+DEBUG:root:Checking headline: Site Index
+DEBUG:root:Checking headline: Site Information Navigation
+DEBUG:root:Found 0 matching links
+DEBUG:root:Scraping URL: https://www.forbes.com/ with keywords: ['Trump']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.forbes.com:443
+DEBUG:urllib3.connectionpool:https://www.forbes.com:443 "GET / HTTP/1.1" 200 83038
+DEBUG:root:Checking headline: BREAKING
+DEBUG:root:Checking headline: DAILY COVER STORY
+DEBUG:root:Checking headline: Producing a hit TV series like 'The Bear' was once a path to serious riches. But developing groundbreaking shows today is worth hundreds of millions less than it used to be.
+
+DEBUG:root:Checking headline: Here Are Trump’s 10 Biggest Billionaire Donors
+DEBUG:root:Found matching link: https://www.forbes.com/sites/leokamin/2024/06/26/here-are-trumps-10-biggest-billionaire-donors-mcmahon-mellon-uiehlein/
+DEBUG:root:Checking headline: Featured
+DEBUG:root:Checking headline: Money
+DEBUG:root:Checking headline: Video
+DEBUG:root:Checking headline: 2024 Forbes Iconoclast Summit Highlight - Long
+DEBUG:root:Checking headline: 2024 Forbes Iconoclast Highlight-Short
+DEBUG:root:Checking headline: Fantasia Reflects On Her Hollywood Walk Of Fame Nomination
+DEBUG:root:Checking headline: How This Model Went Went From Fashion To Founder
+DEBUG:root:Checking headline: Lifestyle
+DEBUG:root:Checking headline: Leadership
+DEBUG:root:Checking headline: Innovation
+DEBUG:root:Checking headline: Business
+DEBUG:root:Checking headline: Small Business
+DEBUG:root:Checking headline: Billionaires
+DEBUG:root:Checking headline: Forbes Vetted
+DEBUG:root:Checking headline: Advisor
+DEBUG:root:Checking headline: Home Improvement
+DEBUG:root:Checking headline: Conferences
+DEBUG:root:Checking headline: Newsletters
+DEBUG:root:Checking headline: Products
+DEBUG:root:Checking headline: Company Info
+DEBUG:root:Checking headline: Forbes Councils
+DEBUG:root:Checking headline: Education
+DEBUG:root:Found 1 matching links
