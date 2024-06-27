@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Keyword Monitor",
+    "version": "1.0",
+    "description": "Monitor websites for keywords and save links",
+    "permissions": [
+      "storage",
+      "tabs",
+      "<all_urls>"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
