@@ -1,12 +1,10 @@
-// main.go
-
 package main
 
 import (
 	"encoding/json"
-	"fmt"
-	"io/ioutil"
+	"log"
 	"net/http"
+	"os/exec"
 	"strings"
 
 	"github.com/gorilla/mux"
@@ -22,74 +20,63 @@ type SavedLink struct {
 	Title string `json:"title"`
 }
 
-var config Config
 var savedLinks []SavedLink
 
 func main() {
-	loadConfig()
-
 	r := mux.NewRouter()
 	r.HandleFunc("/scan", scanHandler).Methods("POST")
-	r.HandleFunc("/config", configHandler).Methods("GET", "POST")
 	r.HandleFunc("/links", linksHandler).Methods("GET")
 
 	http.ListenAndServe(":8080", r)
 }
 
-func loadConfig() {
-	data, err := ioutil.ReadFile("config.json")
-	if err != nil {
-		fmt.Println("Error reading config file:", err)
-		return
-	}
-	json.Unmarshal(data, &config)
-}
-
-func saveConfig() {
-	data, err := json.MarshalIndent(config, "", "  ")
-	if err != nil {
-		fmt.Println("Error marshaling config:", err)
-		return
-	}
-	ioutil.WriteFile("config.json", data, 0644)
-}
-
 func scanHandler(w http.ResponseWriter, r *http.Request) {
 	var data struct {
-		URL     string `json:"url"`
-		Content string `json:"content"`
+		URL      string   `json:"url"`
+		Keywords []string `json:"keywords"`
 	}
-	json.NewDecoder(r.Body).Decode(&data)
+	err := json.NewDecoder(r.Body).Decode(&data)
+	if err != nil {
+		log.Printf("Error decoding request body: %v", err)
+		http.Error(w, "Bad request", http.StatusBadRequest)
+		return
+	}
+	log.Printf("Received scan request for URL: %s with keywords: %v", data.URL, data.Keywords)
 
-	for _, keyword := range config.Keywords {
-		if strings.Contains(strings.ToLower(data.Content), strings.ToLower(keyword)) {
-			savedLinks = append(savedLinks, SavedLink{URL: data.URL, Title: extractTitle(data.Content)})
-			break
-		}
+	// Prepare input for Python script
+	input := map[string]interface{}{
+		"url":      data.URL,
+		"keywords": data.Keywords,
 	}
+	inputJSON, _ := json.Marshal(input)
+
+	// Run Python script
+	cmd := exec.Command("python", "scraper.py")
+	cmd.Stdin = strings.NewReader(string(inputJSON))
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		log.Printf("Error running Python script: %v", err)
+		http.Error(w, "Error running Python script", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("Python script output: %s", string(output))
+
+	// Parse results
+	var newLinks []SavedLink
+	err = json.Unmarshal(output, &newLinks)
+	if err != nil {
+		log.Printf("Error unmarshaling Python script output: %v", err)
+		http.Error(w, "Error processing script output", http.StatusInternalServerError)
+		return
+	}
+
+	// Add new links to savedLinks
+	savedLinks = append(savedLinks, newLinks...)
+	log.Printf("Added %d new links. Total saved links: %d", len(newLinks), len(savedLinks))
 
 	w.WriteHeader(http.StatusOK)
 }
 
-func configHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "GET" {
-		json.NewEncoder(w).Encode(config)
-	} else {
-		json.NewDecoder(r.Body).Decode(&config)
-		saveConfig()
-		w.WriteHeader(http.StatusOK)
-	}
-}
-
 func linksHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(savedLinks)
-}
-
-func extractTitle(content string) string {
-	startIndex := strings.Index(content, "<title>")
-	endIndex := strings.Index(content, "</title>")
-	if startIndex != -1 && endIndex != -1 {
-		return content[startIndex+7 : endIndex]
-	}
-	return ""
 }
