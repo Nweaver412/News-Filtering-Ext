@@ -1,14 +1,13 @@
 DEBUG:root:Script started
-DEBUG:root:Scraping URL: https://www.forbes.com with keywords: ['Hackers', 'Trump']
+DEBUG:root:Scraping URL: https://www.forbes.com with keywords: ['Trump']
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.forbes.com:443
-DEBUG:urllib3.connectionpool:https://www.forbes.com:443 "GET / HTTP/1.1" 200 82980
+DEBUG:urllib3.connectionpool:https://www.forbes.com:443 "GET / HTTP/1.1" 200 83004
 DEBUG:root:Found matching text: Over 51 Million Watched Trump-Biden Debate On TV—Way Down From 2020
 DEBUG:root:Found matching text: Trump Predicts Biden Won’t Drop Out—And Says Biden’s ‘Problem Is Not His Age’—In Post-Debate Speech
 DEBUG:root:Found matching text: Biden Says ‘I Don’t Debate As Well As I Used To’ In Fiery Speech After Rocky Thursday Face-Off With Trump
 DEBUG:root:Found matching text: Supreme Court Limits Obstruction Charges For Jan. 6 Rioters—And It Could Affect Trump
 DEBUG:root:Found matching text: Trump Media Stock Surges In Pre-Market Trading Following Presidential Debate
-DEBUG:root:Found matching text: Hackers Are Now Coming For Your Airline Miles And Hotel Points
 DEBUG:root:Found matching text: New Jersey Does Not Renew Trump Liquor Licenses In Wake Of Felony Conviction
 DEBUG:root:Found matching text: New Jersey Does Not Renew Trump Liquor Licenses In Wake Of Felony Conviction
-DEBUG:root:Found 8 matching resources
+DEBUG:root:Found 7 matching resources
 DEBUG:root:Script finished

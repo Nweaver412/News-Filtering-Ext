@@ -1,21 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Keyword Monitor",
-    "version": "1.0",
-    "description": "Monitor websites for keywords and save links",
-    "permissions": [
-      "storage",
-      "tabs",
-      "activeTab",
-      "scripting"
-    ],
-    "host_permissions": [
-      "<all_urls>"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html"
-    }
+  "manifest_version": 3,
+  "name": "Keyword Monitor",
+  "version": "1.0",
+  "description": "Monitor websites for keywords and save links",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:8080/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' http://localhost:8080"
   }
+}

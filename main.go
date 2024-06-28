@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os/exec"
 	"strings"
+	"sync"
 
 	"github.com/gorilla/mux"
 )
@@ -20,14 +21,17 @@ type SavedLink struct {
 	Title string `json:"title"`
 }
 
-var savedLinks []SavedLink
+var (
+	mutex      sync.Mutex
+	savedLinks []SavedLink
+)
 
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/scan", scanHandler).Methods("POST")
 	r.HandleFunc("/scanAll", scanAllHandler).Methods("POST")
 	r.HandleFunc("/links", linksHandler).Methods("GET")
-
+	r.HandleFunc("/clearLinks", clearLinksHandler).Methods("POST")
 	log.Println("Starting server on :8080")
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
@@ -118,4 +122,18 @@ func scanURL(url string, keywords []string) ([]SavedLink, error) {
 
 func linksHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(savedLinks)
+}
+
+func clearLinksHandler(w http.ResponseWriter, r *http.Request) {
+	mutex.Lock()
+	savedLinks = []SavedLink{}
+	mutex.Unlock()
+
+	log.Println("All links cleared")
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(map[string]string{
+		"message": "All saved links have been cleared",
+	})
 }
