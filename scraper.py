@@ -12,22 +12,19 @@ def scrape_website(url, keywords):
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        matching_links = []
+        matching_resources = []
         
-        for tag in soup.find_all(['h1', 'h2', 'h3']):
-            logging.debug(f"Checking headline: {tag.text}")
-            if any(keyword.lower() in tag.text.lower() for keyword in keywords):
-                link = tag.find_parent('a')
-                if link and 'href' in link.attrs:
-                    full_url = link['href'] if link['href'].startswith('http') else url + link['href']
-                    matching_links.append({
-                        'url': full_url,
-                        'title': tag.text.strip()
-                    })
-                    logging.debug(f"Found matching link: {full_url}")
+        for element in soup.find_all(text=True):
+            text = element.strip()
+            if text and any(keyword.lower() in text.lower() for keyword in keywords):
+                logging.debug(f"Found matching text: {text}")
+                matching_resources.append({
+                    'text': text,
+                    'url': url
+                })
         
-        logging.debug(f"Found {len(matching_links)} matching links")
-        return matching_links
+        logging.debug(f"Found {len(matching_resources)} matching resources")
+        return matching_resources
     except Exception as e:
         logging.error(f"Error scraping {url}: {str(e)}")
         return []
