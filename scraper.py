@@ -14,13 +14,15 @@ def scrape_website(url, keywords):
         
         matching_resources = []
         
-        for element in soup.find_all(text=True):
-            text = element.strip()
+        for element in soup.find_all(['a', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
+            text = element.get_text().strip()
             if text and any(keyword.lower() in text.lower() for keyword in keywords):
                 logging.debug(f"Found matching text: {text}")
+                link = element.get('href') if element.name == 'a' else None
+                resource_url = link if link and link.startswith('http') else url
                 matching_resources.append({
-                    'text': text,
-                    'url': url
+                    'url': resource_url,
+                    'title': text[:100]  # Limit title to 100 characters
                 })
         
         logging.debug(f"Found {len(matching_resources)} matching resources")

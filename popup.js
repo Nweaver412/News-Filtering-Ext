@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const saveConfigButton = document.getElementById('saveConfig');
   const scanAllButton = document.getElementById('scanAll');
   const savedLinksList = document.getElementById('savedLinks');
-  const clearLinksButton = document.getElementById('clearLinks');
 
   chrome.storage.local.get(['websites', 'keywords'], (result) => {
       websitesTextarea.value = (result.websites || []).join('\n');
@@ -44,25 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
         console.error('Error scanning all websites:', error);
       });
-    });
-  });
-
-  clearLinksButton.addEventListener('click', () => {
-    fetch('http://localhost:8080/clearLinks', {
-      method: 'POST'
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Links cleared:', data);
-      loadSavedLinks();
-    })
-    .catch(error => {
-      console.error('Error clearing links:', error);
     });
   });
 
