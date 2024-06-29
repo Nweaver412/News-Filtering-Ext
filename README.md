@@ -1,6 +1,10 @@
-# News-Filtering-Ext
-
-
+██╗    ██╗ ██████╗ ██████╗ ██████╗      ██████╗ █████╗ ████████╗ ██████╗██╗  ██╗███████╗██████╗ 
+██║    ██║██╔═══██╗██╔══██╗██╔══██╗    ██╔════╝██╔══██╗╚══██╔══╝██╔════╝██║  ██║██╔════╝██╔══██╗
+██║ █╗ ██║██║   ██║██████╔╝██║  ██║    ██║     ███████║   ██║   ██║     ███████║█████╗  ██████╔╝
+██║███╗██║██║   ██║██╔══██╗██║  ██║    ██║     ██╔══██║   ██║   ██║     ██╔══██║██╔══╝  ██╔══██╗
+╚███╔███╔╝╚██████╔╝██║  ██║██████╔╝    ╚██████╗██║  ██║   ██║   ╚██████╗██║  ██║███████╗██║  ██║
+ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝      ╚═════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+ 
 ## Introduction
 This Chrome extension allows users to input a list of URLs and keywords. It scrapes the content from these URLs and returns links containing the specified keywords. This tool was made for my roommate Rudolf Aleksander Hansen and I hope he uses it to the maximum ability. It is quite useful for research, or just getting relevant information on topics you care about
 

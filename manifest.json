@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Keyword Monitor",
-  "version": "1.0",
-  "description": "Monitor websites for keywords and save links",
+  "name": "Word Catcher",
+  "version": "1.1.0",
+  "description": "Word Catcher finds topics in lists of sites",
   "permissions": [
     "storage",
     "activeTab",
@@ -13,7 +13,13 @@
     "<all_urls>"
   ],
   "action": {
-    "default_popup": "html/popup.html"
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "96": "assets/icon96.png"
+    }
+  },
+  "icons": {
+    "96": "assets/icon96.png"
   },
   "background": {
     "service_worker": "js/background.js"
