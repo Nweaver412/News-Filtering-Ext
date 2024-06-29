@@ -18,6 +18,7 @@ go get -u github.com/gorilla/mux
 ### Setup
 ```bash
 cd News-Filtering-Ext
+go mod init News-Filtering-Ext-Server
 go run main.go
 ```
 Once these are run and you can see that the server is running in the terminal:
