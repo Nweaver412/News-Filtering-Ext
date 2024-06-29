@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       console.error('Error fetching links:', error);
       updateSavedLinksList([]);
-      updateStatusMessage('Error loading links. Please try again.', 'error');
+      updateStatusMessage('Error: Please start server', 'error');
     });
   }
 

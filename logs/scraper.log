@@ -1,0 +1,8 @@
+DEBUG:root:Script started
+DEBUG:root:Scraping URL: https://wikipedia.com with keywords: ['Trump', 'Biden']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wikipedia.com:443
+DEBUG:urllib3.connectionpool:https://wikipedia.com:443 "GET / HTTP/1.1" 301 169
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://www.wikipedia.org:443 "GET / HTTP/1.1" 200 18791
+DEBUG:root:Found 0 matching resources
+DEBUG:root:Script finished

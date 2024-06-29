@@ -32,6 +32,7 @@ func main() {
 	r.HandleFunc("/scanAll", scanAllHandler).Methods("POST")
 	r.HandleFunc("/links", linksHandler).Methods("GET")
 	r.HandleFunc("/clearLinks", clearLinksHandler).Methods("POST")
+
 	log.Println("Starting server on :8080")
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
@@ -105,7 +106,7 @@ func scanURL(url string, keywords []string) ([]SavedLink, error) {
 		return nil, err
 	}
 
-	cmd := exec.Command("python", "scraper.py")
+	cmd := exec.Command("python", "scripts/scraper.py")
 	cmd.Stdin = strings.NewReader(string(inputJSON))
 	output, err := cmd.CombinedOutput()
 	if err != nil {

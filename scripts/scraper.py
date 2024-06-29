@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import logging
 
-logging.basicConfig(level=logging.DEBUG, filename='scraper.log', filemode='w')
+logging.basicConfig(level=logging.DEBUG, filename='logs/scraper.log', filemode='w')
 
 def scrape_website(url, keywords):
     try:
