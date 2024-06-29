@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const keywordsTextarea = document.getElementById('keywords');
   const saveConfigButton = document.getElementById('saveConfig');
   const scanAllButton = document.getElementById('scanAll');
-  const savedLinksList = document.getElementById('savedLinks');
+  const savedLinksContainer = document.getElementById('savedLinks');
   const clearLinksButton = document.getElementById('clearLinks');
   const statusMessage = document.getElementById('statusMessage');
 
@@ -90,11 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSavedLinksList(links) {
     if (Array.isArray(links) && links.length > 0) {
-      savedLinksList.innerHTML = links.map(link => 
-        `<li><a href="${link.url}" target="_blank">${link.title || link.url}</a></li>`
-      ).join('');
+      savedLinksContainer.innerHTML = links.map(link => `
+        <div class="link-item">
+          ${link.image ? `<img src="${link.image}" alt="Link preview" class="link-image">` : ''}
+          <div class="link-content">
+            <a href="${link.url}" target="_blank" class="link-title">${link.title || link.url}</a>
+            <span class="link-url">${link.url}</span>
+          </div>
+        </div>
+      `).join('');
     } else {
-      savedLinksList.innerHTML = '<li>No saved links available</li>';
+      savedLinksContainer.innerHTML = '<p>No saved links available</p>';
     }
   }
 

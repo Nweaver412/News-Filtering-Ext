@@ -92,6 +92,7 @@ func scanAllHandler(w http.ResponseWriter, r *http.Request) {
 		"message":  "All scans completed",
 		"newLinks": totalNewLinks,
 	})
+	log.Println("All scans completed")
 }
 
 func scanURL(url string, keywords []string) ([]SavedLink, error) {
