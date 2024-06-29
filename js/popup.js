@@ -6,12 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLinksContainer = document.getElementById('savedLinks');
   const clearLinksButton = document.getElementById('clearLinks');
   const statusMessage = document.getElementById('statusMessage');
+  const settingsToggle = document.getElementById('settingsToggle');
+  const settingsPanel = document.getElementById('settingsPanel');
+  const themeToggleButton = document.getElementById('themeToggle'); // Ensure this button is in your HTML
 
-  chrome.storage.local.get(['websites', 'keywords'], (result) => {
+  // Load saved configuration
+  chrome.storage.local.get(['websites', 'keywords', 'theme'], (result) => {
     websitesTextarea.value = (result.websites || []).join('\n');
     keywordsTextarea.value = (result.keywords || []).join('\n');
+    if (result.theme === 'dark') {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
   });
 
+  // Toggle settings panel
+  settingsToggle.addEventListener('click', () => {
+    settingsPanel.style.display = settingsPanel.style.display === 'none' ? 'block' : 'none';
+  });
+
+  // Theme toggle button
+  themeToggleButton.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-theme');
+    chrome.storage.local.set({ theme: isDark ? 'dark' : 'light' }, () => {
+      console.log('Theme changed to ' + (isDark ? 'dark' : 'light'));
+    });
+  });
+
+  // Save configuration
   saveConfigButton.addEventListener('click', () => {
     const config = {
       websites: websitesTextarea.value.split('\n').filter(s => s.trim()),
@@ -23,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Clear links
   clearLinksButton.addEventListener('click', () => {
     fetch('http://localhost:8080/clearLinks', {
       method: 'POST',
@@ -47,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Scan all websites
   scanAllButton.addEventListener('click', () => {
     chrome.storage.local.get(['websites', 'keywords'], (result) => {
       const websites = result.websites || [];
@@ -89,19 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateSavedLinksList(links) {
-    if (Array.isArray(links) && links.length > 0) {
-      savedLinksContainer.innerHTML = links.map(link => `
-        <div class="link-item">
-          ${link.image ? `<img src="${link.image}" alt="Link preview" class="link-image">` : ''}
-          <div class="link-content">
-            <a href="${link.url}" target="_blank" class="link-title">${link.title || link.url}</a>
-            <span class="link-url">${link.url}</span>
-          </div>
+    savedLinksContainer.innerHTML = links.map(link => `
+      <div class="link-item">
+        ${link.image ? `<img src="${link.image}" alt="Link preview" class="link-image">` : ''}
+        <div class="link-content">
+          <a href="${link.url}" target="_blank" class="link-title">${link.title || link.url}</a>
+          <span class="link-url">${link.url}</span>
         </div>
-      `).join('');
-    } else {
-      savedLinksContainer.innerHTML = '<p>No saved links available</p>';
-    }
+      </div>
+    `).join('');
   }
 
   function updateStatusMessage(message, type) {
@@ -113,5 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   }
 
-  loadSavedLinks(); // Load saved links on popup open
+  // Load saved links when the popup opens
+  loadSavedLinks();
 });
